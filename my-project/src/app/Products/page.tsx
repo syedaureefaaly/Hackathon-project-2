@@ -1,8 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
 import Footer from "@/components/Footer";
-function Products(){
-    return (
+import Navbar from "@/components/Navbar";
+
+const Products =() =>{
+  
+  return (
        <div>
             <div className="w-full bg-[#272343] py-4 px-6 sm:px-8 md:px-16 lg:px-32">
       <div className="flex justify-between items-center">
@@ -49,24 +52,7 @@ function Products(){
           </div>
      </main>
       {/* Third Section: Navigation and Contact */}
-      <main className="flex justify-between items-center w-full h-[84px] bg-[#ffffff] py-4 px-6 sm:px-8 md:px-16 lg:px-32">
-        <div className="flex items-center gap-8">
-          <ul className="flex justify-between items-center gap-8">
-            <li className="text-xs sm:text-sm hover:text-[#007580]">Home</li>
-            <li className="text-xs sm:text-sm hover:text-[#007580]">Shop</li>
-           <Link href="/Products"className="text-xs sm:text-sm hover:text-[#007580]">Product </Link>
-            <li className="text-xs sm:text-sm hover:text-[#007580]">Pages</li>
-            <li className="text-xs sm:text-sm hover:text-[#007580]">About</li>
-          </ul>
-        </div>
-
-        {/* Contact Section */}
-        <div className="flex items-center gap-4">
-          <p className="text-xs sm:text-sm text-gray-700">Contact:</p>
-          <h1 className="text-xs sm:text-sm text-gray-700">(808) 555-0111</h1>
-        </div>
-       </main>
-
+      <Navbar/>
     
        <main className="w-full py-12 px-6 sm:px-12 md:px-16 lg:px-32">
       <h1 className="font-bold text-[32px] leading-[35.2px] text-[#272343] mb-8">

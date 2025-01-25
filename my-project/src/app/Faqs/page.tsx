@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 
 function Faqs (){
     return (
@@ -51,24 +52,7 @@ function Faqs (){
           </div>
      </main>
       {/* Third Section: Navigation and Contact */}
-      <main className="flex justify-between items-center w-full h-[84px] bg-[#ffffff] py-4 px-6 sm:px-8 md:px-16 lg:px-32">
-        <div className="flex items-center gap-8">
-          <ul className="flex justify-between items-center gap-8">
-            <li className="text-xs sm:text-sm hover:text-[#007580]">Home</li>
-            <li className="text-xs sm:text-sm hover:text-[#007580]">Shop</li>
-           <Link href="/Products"className="text-xs sm:text-sm hover:text-[#007580]">Product </Link>
-            <li className="text-xs sm:text-sm hover:text-[#007580]">Pages</li>
-            <li className="text-xs sm:text-sm hover:text-[#007580]">About</li>
-          </ul>
-        </div>
-
-        {/* Contact Section */}
-        <div className="flex items-center gap-4">
-          <p className="text-xs sm:text-sm text-gray-700">Contact:</p>
-          <h1 className="text-xs sm:text-sm text-gray-700">(808) 555-0111</h1>
-        </div>
-       </main>
-     
+    <Navbar/>
      <main className="w-full py-10 px-4">
       <div>
       <h2 className="font-bold text-3xl md:text-4xl lg:text-[48px] leading-[56px] text-[#333333] text-center pb-10">

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Navbar from "./Navbar";
 
 function TopHeader() {
   return (
@@ -28,7 +29,6 @@ function TopHeader() {
               <Image src="/Vector.png" alt="Arrow Icon" width={7} height={3.5} />
             </div>
           </div>
-
           <div>
             <Link href="/Faqs" className="text-white font-normal text-xs sm:text-sm">Faqs</Link>
           </div>
@@ -49,24 +49,8 @@ function TopHeader() {
           </div>
      </main>
       {/* Third Section: Navigation and Contact */}
-      <main className="flex justify-between items-center w-full h-[84px] bg-[#ffffff] py-4 px-6 sm:px-8 md:px-16 lg:px-32">
-        <div className="flex items-center gap-8">
-          <ul className="flex justify-between items-center gap-8">
-            <li className="text-xs sm:text-sm hover:text-[#007580]">Home</li>
-            <li className="text-xs sm:text-sm hover:text-[#007580]">Shop</li>
-           <Link href="/Products"className="text-xs sm:text-sm hover:text-[#007580]">Product </Link>
-            <li className="text-xs sm:text-sm hover:text-[#007580]">Pages</li>
-            <li className="text-xs sm:text-sm hover:text-[#007580]">About</li>
-          </ul>
-        </div>
-
-        {/* Contact Section */}
-        <div className="flex items-center gap-4">
-          <p className="text-xs sm:text-sm text-gray-700">Contact:</p>
-          <h1 className="text-xs sm:text-sm text-gray-700">(808) 555-0111</h1>
-        </div>
-      </main>
-      <main className="w-full flex items-center justify-center bg-[#F0F2F3] py-12 px-6 sm:px-12 md:px-16 lg:px-24">
+      <Navbar/>
+     <main className="w-full flex items-center justify-center bg-[#F0F2F3] py-12 px-6 sm:px-12 md:px-16 lg:px-24">
       <div className="flex flex-col md:flex-row items-center justify-between max-w-[1200px] w-full gap-8">
         {/* Left side content */}
         <div className="flex flex-col items-start md:w-1/2">
