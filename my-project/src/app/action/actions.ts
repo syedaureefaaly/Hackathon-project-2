@@ -34,7 +34,7 @@ export const removeFromCart = (productId: string) => {
 
 //  Update quantity in the cart
 export const updateCartQuantity = (productId: string, quantity: number) => {
-    let cart: Product[] = JSON.parse(localStorage.getItem("cart") || "[]");
+    const cart: Product[] = JSON.parse(localStorage.getItem("cart") || "[]");
     const productIndex = cart.findIndex(item => item._id === productId);
 
     if (productIndex > -1) {

@@ -43,7 +43,7 @@ const Checkout = () => {
         (total, item) => total + item.price * item.inventory,
         0
       );
-      const total = Math.max(subtotal - discount, 0);
+      // const total = Math.max(subtotal - discount, 0);
     
       const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setFormValues({
