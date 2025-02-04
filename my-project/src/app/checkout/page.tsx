@@ -242,7 +242,4 @@ return (
 }
 
 export default Checkout;
-function setDiscount(arg0: number) {
-  throw new Error('Function not implemented.');
-}
 
