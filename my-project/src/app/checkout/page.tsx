@@ -9,8 +9,6 @@ import { Product } from '../types/product';
 import { getCartItems } from '../action/actions';
 
 const Checkout = () => {
-    const [cartItems, setCartItems] = useState<Product[]>([]);
-    const [discount, setDiscount] = useState<number>(0);
     const [formValues, setFormValues] = useState({
       firstName: "",
       lastName: "",
@@ -31,21 +29,7 @@ const Checkout = () => {
         email: false,
       });
 
-      useEffect(() => {
-        setCartItems(getCartItems());
-        const appliedDiscount = localStorage.getItem("appliedDiscount");
-        if (appliedDiscount) {
-          setDiscount(Number(appliedDiscount));
-        }
-      }, []);
-
-      const subtotal = cartItems.reduce(
-        (total, item) => total + item.price * item.inventory,
-        0
-      );
-      // const total = Math.max(subtotal - discount, 0);
-    
-      const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setFormValues({
           ...formValues,
           [e.target.id]: e.target.value,
@@ -260,3 +244,7 @@ return (
 }
 
 export default Checkout;
+function setDiscount(arg0: number) {
+  throw new Error('Function not implemented.');
+}
+

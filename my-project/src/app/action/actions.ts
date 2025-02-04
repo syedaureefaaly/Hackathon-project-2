@@ -2,7 +2,7 @@ import { Product } from "../types/product";
 
 //  Add item to cart & ensure new items create new cards
 export const addToCart = (product: Product) => {
-    let cart: Product[] = JSON.parse(localStorage.getItem("cart") || "[]");
+    const cart: Product[] = JSON.parse(localStorage.getItem("cart") || "[]");
 
     // Check if product already exists in the cart
     const existingProductIndex = cart.findIndex(item => item._id === product._id);
