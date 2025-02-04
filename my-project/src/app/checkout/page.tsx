@@ -4,9 +4,7 @@ import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useEffect, useState } from 'react'
-import { Product } from '../types/product';
-import { getCartItems } from '../action/actions';
+import React, { useState } from 'react'
 
 const Checkout = () => {
     const [formValues, setFormValues] = useState({
